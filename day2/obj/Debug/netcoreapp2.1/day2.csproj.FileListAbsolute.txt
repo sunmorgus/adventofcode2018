@@ -1,0 +1,11 @@
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/bin/Debug/netcoreapp2.1/day2.deps.json
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/bin/Debug/netcoreapp2.1/day2.runtimeconfig.json
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/bin/Debug/netcoreapp2.1/day2.runtimeconfig.dev.json
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/bin/Debug/netcoreapp2.1/day2.dll
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/bin/Debug/netcoreapp2.1/day2.pdb
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/obj/Debug/netcoreapp2.1/day2.csprojAssemblyReference.cache
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/obj/Debug/netcoreapp2.1/day2.csproj.CoreCompileInputs.cache
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/obj/Debug/netcoreapp2.1/day2.AssemblyInfoInputs.cache
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/obj/Debug/netcoreapp2.1/day2.AssemblyInfo.cs
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/obj/Debug/netcoreapp2.1/day2.dll
+/Users/nicklasdemayo/aaa/projects-local/adventofcode2018/day2/obj/Debug/netcoreapp2.1/day2.pdb
