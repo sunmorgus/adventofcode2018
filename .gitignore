@@ -255,4 +255,3 @@ logs/
 **/Provision-Log*.txt
 BAH.Admin.Powershell/Deployment/secure.json
 /sh.exe.stackdump
-**/obj/*
