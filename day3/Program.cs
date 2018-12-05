@@ -12,14 +12,14 @@ namespace day3
 
         static void Main(string[] args)
         {
-            Part1Array(false);
+            Part2(false);
+            Part1(false);
         }
 
-        private static void Part1Array(bool useExample)
+        private static int[, ] Part1(bool useExample)
         {
-            int threshold;
-            Dictionary<int, Rectangle> claims;
-            GetValues(useExample, out threshold, out claims);
+            int threshold = 2;
+            Dictionary<int, Rectangle> claims = GetValues(useExample);
             int fabricWidth = (useExample ? 8 : 1000);
             int fabricHeight = (useExample ? 8 : 1000);
 
@@ -55,48 +55,45 @@ namespace day3
             }
 
             Console.WriteLine($"Answer: {totalSquareInches}");
+
+            return array2d;
         }
 
-        private static void Part1(bool useExample)
+        private static void Part2(bool useExample)
         {
-            int threshold;
-            Dictionary<int, Rectangle> values;
-            GetValues(useExample, out threshold, out values);
+            Dictionary<int, Rectangle> claims = GetValues(useExample);
 
-            int totalSquareInches = 0;
-            foreach (KeyValuePair<int, Rectangle> elf in values)
+            List<int> ids = new List<int>();
+            foreach (KeyValuePair<int, Rectangle> claim in claims)
             {
                 int count = 0;
-                foreach (KeyValuePair<int, Rectangle> current in values)
+                foreach (KeyValuePair<int, Rectangle> current in claims)
                 {
-                    if (elf.Key < current.Key)
+                    if (claim.Key != current.Key)
                     {
-                        bool isCollision = elf.Value.IntersectsWith(current.Value);
+                        bool isCollision = claim.Value.IntersectsWith(current.Value);
 
                         if (isCollision)
                         {
-                            count++;
-
-                            if (count >= threshold)
-                            {
-                                Rectangle collision = (Rectangle.Intersect(elf.Value, current.Value));
-                                int squareInches = (collision.Width * collision.Height);
-                                totalSquareInches += squareInches;
-                            }
+                            count += 1;
                         }
                     }
                 }
+
+                if (count == 0)
+                {
+                    ids.Add(claim.Key);
+                }
             }
 
-            Console.WriteLine($"Answer: {totalSquareInches}");
+            Console.WriteLine($"Answer: {ids[0]}");
         }
 
-        private static void GetValues(bool useExample, out int threshold, out Dictionary<int, Rectangle> values)
+        private static Dictionary<int, Rectangle> GetValues(bool useExample)
         {
             string[] inputs = (useExample ? exampleInput : puzzleInput);
-            threshold = (useExample ? 2 : 2);
 
-            values = new Dictionary<int, Rectangle>();
+            Dictionary<int, Rectangle> values = new Dictionary<int, Rectangle>();
 
             // crawl before you walk
             foreach (string input in inputs)
@@ -117,6 +114,8 @@ namespace day3
                 Rectangle rectangle = new Rectangle(x, y, width, height);
                 values.Add(index, rectangle);
             }
+
+            return values;
         }
     }
 }
