@@ -1,0 +1,8 @@
+{
+    "csharpfixformat.style.spaces.beforeIndexerBracket": false,
+    "csharpfixformat.style.newline.elseCatch": true,
+    "csharpfixformat.style.braces.onSameLine": false,
+    "csharp.suppressHiddenDiagnostics": false,
+    "csharp.suppressDotnetRestoreNotification": true,
+    "csharp.format.enable": false
+}
